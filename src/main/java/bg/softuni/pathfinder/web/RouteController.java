@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class RouteController {
 
-    private RouteService routeService;
+    private final RouteService routeService;
 
     public RouteController(RouteService routeService) {
         this.routeService = routeService;
@@ -20,6 +20,9 @@ public class RouteController {
     @GetMapping("/routes")
         public String routes(Model model) {
        // RouteShortInfoDTO randomRoute = routeService.getRandomRoute();
+
+        // Controller to handle all things route relates
+
 
         List<RouteShortInfoDTO> routes = routeService.getAll();
 
