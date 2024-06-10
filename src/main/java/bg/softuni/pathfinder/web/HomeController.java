@@ -9,6 +9,8 @@ import java.util.Random;
 @Controller
 public class HomeController {
 
+    // Controller handling the info pages - home, about ,contact
+
     @GetMapping("/")
     public String index(Model model) {
         double SofiaTemp = new Random().nextDouble();
